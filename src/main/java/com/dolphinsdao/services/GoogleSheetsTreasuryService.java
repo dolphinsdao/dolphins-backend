@@ -169,7 +169,7 @@ import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
                         old.remove(address);
                         log.info("Processed {}", value);
                     } catch (Exception ex) {
-                        log.error("Error while processing token at row: {}", value);
+                        log.error("Error while processing token at row: {}", value, ex);
                     }
                 } else {
                     this.auctionsController.getTokens().stream().filter(
